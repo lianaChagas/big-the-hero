@@ -8,7 +8,7 @@ module.exports = {
           return resposta.json(ongs);
       },
 
-    async create(requisicao, reposta) {
+    async create(requisicao, resposta) {
         const {name, email, whatsapp, city, uf} = requisicao.body;
 
         const id = crypto.randomBytes(4).toString('HEX');
@@ -22,6 +22,6 @@ module.exports = {
             uf,
         })
 
-        return resposta.json({ id });
+        return resposta.json({id});
         }   
 };
